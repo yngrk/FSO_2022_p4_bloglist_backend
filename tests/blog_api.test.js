@@ -12,42 +12,6 @@ beforeEach(async () => {
   await Blog.deleteMany();
   await Blog.insertMany(initialBlogs);
   await User.deleteMany();
-
-  // const newUser01 = {
-  //   username: 'tempUser01',
-  //   name: 'tempUserFullName',
-  //   password: 'pass1',
-  // };
-
-  // const newUser02 = {
-  //   username: 'tempUser02',
-  //   name: 'tempUserFullName',
-  //   password: 'pass2',
-  // };
-
-  // const temp01 = await api
-  //   .post('/api/users')
-  //   .send(newUser01);
-
-  // const temp02 = await api
-  //   .post('/api/users')
-  //   .send(newUser02);
-
-  // // generate Token
-  // const user01ForToken = {
-  //   username: temp01.body.username,
-  //   id: temp01.body.id,
-  // };
-  // const user02ForToken = {
-  //   username: temp02.body.username,
-  //   id: temp02.body.id,
-  // };
-
-  // const token01 = jwt.sign(user01ForToken, process.env.SECRET);
-  // const token02 = jwt.sign(user02ForToken, process.env.SECRET);
-
-  // tempTokens.push(token01);
-  // tempTokens.push(token02);
 });
 
 test('blogs are returned as json', async () => {
